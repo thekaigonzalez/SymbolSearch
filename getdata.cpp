@@ -24,8 +24,13 @@ bool symbol_file_init(const char* Fname, const char *__s)
 {
      typedef void (*command_t)();
      void *lib = dlopen(Fname, RTLD_LAZY);
-     auto command = (command_t) dlsym(lib, __s);
-    
+     if (dlsym(lib, __s) == NULL)
+     {
+         return false; // failed
+     }
+     else {
+         return true; // succeeded
+     }
 }
 
 void run_diagnostic(const char *Fname_BASE)
