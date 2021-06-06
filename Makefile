@@ -1,7 +1,7 @@
 all:
-	g++ serial.cpp -lstdc++fs -lstdc++ -c -o obj/serial.o
+	g++ serial.cpp -lstdc++fs -lstdc++ -c -ldl -o obj/serial.o
 	g++ getdata.cpp -lstdc++fs -lstdc++ -c -o obj/getdata.o
-	gcc -o bin/SymbolSearch obj/serial.o obj/getdata.o -lstdc++ -lstdc++fs 
+	gcc -o bin/SymbolSearch obj/serial.o obj/getdata.o -lstdc++ -ldl -lstdc++fs 
 run:
 	cc testobj.c -lstdc++fs -lstdc++ -o obj/testobj.o
 vdir:
