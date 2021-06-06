@@ -1,4 +1,4 @@
-# SymbolSearch
+# SymbolSearch *BCC*
 Searches for symbols in a given file.
 
 ## In-Depth
@@ -15,3 +15,10 @@ $ make all
 ```
 
 you can view the documentation in the documentation directory (document)
+
+
+# BCE || BCC
+
+Bogus Compiler Explorer
+
+Allows execution of functions from dynamic libraries (Normal libraries ?)
